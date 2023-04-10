@@ -37,15 +37,36 @@ git clone <CLONE_LINK>
 Now, you can start working on your code within the directory it creates!
 
 ## Creating a branch
-In your terminal, make sure you are on the default branch (most likely `main`) and pull the most recent code with `git pull`. Next, you will run `git checkout -b <BRANCH_NAME>` and it will create the new branch and switch your directory to that branch.
+In your terminal, make sure you are on the default branch (most likely `main`) and pull the most recent code with `git pull`. Next, you will run 
+```
+git checkout -b <BRANCH_NAME>
+``` 
+and it will create the new branch and switch your directory to that branch.
 
 I have trouble remembering that command, so I alias that command to `nb` and then just run `nb <BRANCH_NAME>` when creating a new branch.
+
+## Checkout an existing branch
+If there is an existing branch you'd like to switch to on your local machine (this could be `main`, or it could be a peer's branch that they want you to run), you can checkout that branch with:
+```
+git checkout <BRANCH_NAME>
+```
+
+### Troubleshooting
+If you have uncommitted changes, git will yell at you (Usually the message is something like `You have unstaged changes. Please commit or stash them.`). This is out of kindness since it doesn't want you to lose those changes. It suggests two ways to get around this:
+
+1. If you know you want to keep your changes and eventually push them, you should do `git commit -m "<MESSAGE CONTENT>"`
+2. If you're not sure whether you want to keep your changes or you'd like to integrate your changes to the branch, run:
+  ```
+  git stash # pushes your changes to the side
+  git checkout <BRANCH_NAME> # checkout a branch
+  git stash pop # apply the changes you stashed to the branch you pulled
+  ```
 
 ## Updating your branch with changes from the default branch
 Sometimes your branch will become **outdated** if someone else has pushed to the default branch while you are working on it. This is okay! If you haven't been working in the same files, then you just need to run:
 ```sh
 git fetch origin # updates your local main branch with what is currently on GitHub
-git pull origin main # updates your branch with those changes
+git merge origin main # updates your branch with those changes
 ```
 
 If you were modifying that file, there likely will be something called a **merge conflict**. Don't panic! It will look scary, but all you need to do is delete the lines of code that aren't right. For example: 
