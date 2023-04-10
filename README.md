@@ -1,6 +1,10 @@
 # r2h-c13
 Resource hub for Road to Hire Cohort 13
 
+## Contents
+
+[Tools](https://github.com/bethanyj28/r2h-c13/tree/main/tools) - content on helpful tools you might use as a developer
+
 ## Helpful Resources
 
 This repo won't have everything, but here are some sites that can help you find the answer:
