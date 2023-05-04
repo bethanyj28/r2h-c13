@@ -210,7 +210,7 @@ When you need to iterate through property values, which is especially helpful wh
    }
    ```
 
-Answers are [here](https://github.com/bethanyj28/r2h-resources/blob/main/loops/answers.md)!
+Answers are [here](https://github.com/bethanyj28/r2h-c13/blob/main/javascript/loops_answers.md)!
 
 # Resources
 
