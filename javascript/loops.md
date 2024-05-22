@@ -149,16 +149,18 @@ Rav4
 ```
 
 ```js
-const letters = ['a', 'b', 'c']
+const word = "doggy"
 for (const letter of letters) {
   console.log(letter)
 }
 ```
 This would log:
 ```
-a
-b
-c
+d
+o
+g
+g
+y
 ```
 
 ### When to use the `for...of` loop
