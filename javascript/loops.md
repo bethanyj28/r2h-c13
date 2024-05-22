@@ -150,7 +150,7 @@ Rav4
 
 ```js
 const word = "doggy"
-for (const letter of letters) {
+for (const letter of word) {
   console.log(letter)
 }
 ```
